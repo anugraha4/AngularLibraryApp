@@ -3,117 +3,15 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of books">
                     <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082470/9780824709785.jpg" class="card-img-top" alt="...">
+                        <img height="300px" width="300px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="text-dark"class="card-title">Global Librarianship</h5>
-                          <p class="card-text">By Martin A. Kesselman</p>
-                          <p class="card-text">Providing new insights into the role of librarianship in an age of socioeconomic, environmental, and political.</p>
-                          <p class="card-text">July 23, 2004</p>
+                          <h5 class="text-dark"class="card-title">{{i.title}}</h5>
+                          <p class="card-text">{{i.author}}</p>
+                          <p class="card-text">{{i.discription}}</p>
+                          <p class="card-text">{{i.releasedyear}}</p>
                           
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082470/9780824709662.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Becoming a Digital Library</h5>
-                          <p class="card-text">By Susan J. Barnes</p>
-                          <p class="card-text">This excellent reference traces  been available day in and day out to users worldwide for more than a decade.</p>
-                          <p class="card-text">November 04, 2003</p>
-
-                          
-                          
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082478/9780824789718.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Library Information Technology and Networks</h5>
-                          <p class="card-text">By Charles Grosch</p>
-                          <p class="card-text">Offers an historical perspective of the past 25 year processing systems according to their size and platform. </p>
-                          <p class="card-text">November 15, 1994</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082477/9780824778200.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Designing Instruction for Library Users: A Practical Guide</h5>
-                          <p class="card-text">By Marilla Svinicki</p>
-                          <p class="card-text">This book discusses the principles of the theoretical framework needed for design decision-making.</p>
-                          <p class="card-text">November 24, 1987</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082477/9780824775087.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">An Introduction to Information Science</h5>
-                          <p class="card-text">By Roger Flynn</p>
-                          <p class="card-text">This book comprises an introduction to information as an manipulated, retrieved, transmitted, and used. </p>
-                          <p class="card-text">December 22, 1986</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082477/9780824775049.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Organizing Nonprint Materials, Second Edition</h5>
-                          <p class="card-text">By Daily</p>
-                          <p class="card-text">This book surveys the various methods of microcomputers both for storing nonprint items and keeping track of them.</p>
-                          <p class="card-text">August 15, 1986</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082477/9780824771423.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Effective Online Searching: A Basic Text</h5>
-                          <p class="card-text">By Borgman</p>
-                          <p class="card-text">This book focuses on searching and hands-on experience, which learn searching for their own use as well.</p>
-                          <p class="card-text">July 11, 1984</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" src="https://images.routledge.com/common/jackets/crclarge/978082478/9780824782979.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Scientific and Technical Information Resources</h5>
-                          <p class="card-text">By Subramanyam</p>
-                          <p class="card-text">This book focuses on current practices in scientific and technical  characteristics and biblio­graphic.</p>
-                          <p class="card-text">March 01, 1981</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082476/9780824769000.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Furnishing the Library Interior</h5>
-                          <p class="card-text">By Pierce</p>
-                          <p class="card-text">This book discusses the selection, evaluation, and purchase of furniture and equipment for libraries. </p>
-                          <p class="card-text">January 01, 1980</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <img height="300px" width="300px" src="https://images.routledge.com/common/jackets/crclarge/978082479/9780824794767.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="text-dark" class="card-title">Manheimer's Cataloging and Classification, Revised and Expanded</h5>
-                          <p class="card-text">By Jerry Saye</p>
-                          <p class="card-text">This work has been revised and updated to include and the Library of Congress Classification Schedules. </p>
-                          <p class="card-text">September 09, 1999</p>
                         </div>
                       </div>
                 </div>
