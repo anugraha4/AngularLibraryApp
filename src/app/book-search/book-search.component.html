@@ -8,10 +8,36 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Book Title</label>
-                    <input name="titlebook" [(ngModel)]="titlebook"type="text" class="form-control">
+                    <input name="booktitle" [(ngModel)]="booktitle"type="text" class="form-control">
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><br>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center"><br>
                     <button (click)="search()"class="btn btn-info">Search</button>
+                </div>
+            </div>
+            <div class="row mt-4" *ngFor="let j of searchBook">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Author</label>
+                    <input type="text" class="form-control" value="{{j.author}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Description</label>
+                    <textarea name="" id="" cols="3" rows="3" class="form-control"value="{{j.description}}" ></textarea>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Publisher</label>
+                    <input type="text" class="form-control" value="{{j.publisher}}" >
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Distributor</label>
+                    <input type="text" class="form-control" value="{{j.distributor}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Price</label>
+                    <input type="text" class="form-control" value="{{j.price}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Image</label>
+                    <input type="text" class="form-control" value="{{j.image}}">
                 </div>
             </div>
         </div>
