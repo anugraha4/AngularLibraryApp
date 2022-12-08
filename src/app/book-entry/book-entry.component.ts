@@ -7,19 +7,23 @@ import { Component } from '@angular/core';
 })
 export class BookEntryComponent {
   image=""
-  title=""
+  booktitle=""
   author=""
-  discription=""
-  releasedyear=""
+  description=""
+  publisher=""
+  distributor=""
+  price=""
 
   readValues = ()=>
   {
 let books:any={
   "image":this.image,
-  "title":this.title,
+  "booktitle":this.booktitle,
   "author":this.author,
-  "discription":this.discription,
-  "releasedyear":this.releasedyear
+  "description":this.description,
+  "publisher":this.publisher,
+  "distributor":this.distributor,
+  "price":this.price
 }
 console.log(books);
 

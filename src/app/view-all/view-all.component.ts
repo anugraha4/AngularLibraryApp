@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-view-all',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-all.component.css']
 })
 export class ViewAllComponent {
+
+  constructor(private api:ApiServiceService){
+    api.fetchBook().subscribe(
+      (response)=>
+      {
+        this.books=response;
+      }
+    )
+  }
 books:any=[
   
 
