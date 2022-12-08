@@ -10,6 +10,16 @@ export class ApiServiceService {
 
   fetchBook =()=>
   {
-    return this.http.get("http://localhost:8080/entry")
+    return this.http.get("http://localhost:8080/view")
+  }
+
+  addBook =(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/entry",dataToSend)
+  }
+
+  searchBook=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/search",dataToSend)
   }
 }
