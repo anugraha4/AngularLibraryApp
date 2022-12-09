@@ -7,7 +7,9 @@ import { ApiServiceService } from '../api-service.service';
   styleUrls: ['./book-search.component.css']
 })
 export class BookSearchComponent {
-  constructor(private api:ApiServiceService){}
+  constructor(private api:ApiServiceService){
+    
+  }
   booktitle=""
   searchBook:any=[]
 
@@ -23,6 +25,22 @@ search=()=>
         alert("Invalid title")
       } else {
         this.searchBook=response
+      }
+    }
+  )
+}
+delete=(id:any)=>
+{
+  let ser:any={"id":id}
+  this.api.deleteBook(ser).subscribe(
+    (res:any)=>{
+      console.log(res)
+      if(res.status=="success"){
+        alert("Book deleted")
+        window.location.reload()
+      }
+      else{
+        alert("Something went wrong")
       }
     }
   )

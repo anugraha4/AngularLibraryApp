@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+<div class="bg-success p-2 text-dark bg-opacity-25">
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -14,32 +15,28 @@
                     <button (click)="search()"class="btn btn-info">Search</button>
                 </div>
             </div>
-            <div class="row mt-4" *ngFor="let j of searchBook">
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Author</label>
-                    <input type="text" class="form-control" value="{{j.author}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Description</label>
-                    <textarea name="" id="" cols="3" rows="3" class="form-control"value="{{j.description}}" ></textarea>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Publisher</label>
-                    <input type="text" class="form-control" value="{{j.publisher}}" >
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Distributor</label>
-                    <input type="text" class="form-control" value="{{j.distributor}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Price</label>
-                    <input type="text" class="form-control" value="{{j.price}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Image</label>
-                    <input type="text" class="form-control" value="{{j.image}}">
+            <div class="row">
+            <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let j of searchBook">
+                <div class="card">
+                    <img height="300px" width="300px" src="{{j.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-dark"class="card-title">{{j.booktitle}}</h5>
+                      <p class="card-text">Author: {{j.author}}</p>
+                      <p class="card-text">{{j.description}}</p>
+                      <p class="card-text">{{j.publisher}}</p>
+                      <p class="card-text">{{j.distributor}}</p>
+                      <p class="card-text">Price: {{j.price}}</p>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center"><br>
+                    <button (click)="delete(j.id)"class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>
+            
+        </div>
     </div>
+</div>
 </div>
